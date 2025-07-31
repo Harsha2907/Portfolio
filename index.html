@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsha HR | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Harsha HR</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+
+<section class="hero-section">
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="intro">Hello, I’m</p>
+      <h1>Harsha <span>H R</span></h1>
+      <h3>A Passionate Developer & Engineer</h3>
+      <p class="desc">Welcome to my professional portfolio website.</p>
+      <a href="#projects" class="hero-btn">🚀 View My Work</a>
+     <a href="Harsha H R.pdf" id="resumeBtn" class="hero-btn">Download Resume</a>
+
+     <!-- Hidden anchor section to scroll down -->
+<div id="downloadResume" style="margin-top: 100px;"></div>
+
+<script>
+  document.querySelector(".resume-download-btn").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Scroll to #downloadResume section
+    document.querySelector("#downloadResume").scrollIntoView({ behavior: "smooth" });
+
+    // Trigger file download
+    const link = document.createElement("a");
+    link.href = "Harsha_HR_Resume.pdf.pdf"; // Use correct uploaded file name
+    link.download = "Harsha_HR_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+</script>
+
+
+      
+
+    </div>
+    <div class="hero-image">
+      <img src="Harsha H R.png" alt="Harsha HR" />
+      
+    </div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>I’m a 7th semester Computer Science Engineering student at GM Institute of Technology, Davangere (VTU). I love using technology to solve real-world problems and build smart systems. I have a good understanding of programming, web development, and new technologies like IoT and AI. Right now, I’m focusing on learning more about full-stack development and integrating smart systems through my college and personal projects..</p>
+    </div>
+  </section>
+<section id="skills" class="skills-section">
+  <h2 class="section-title">💡 Skills</h2>
+  <div class="skills-container">
+
+    <!-- Tools -->
+   <div class="skills-list">
+  <span class="skill-icon">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+    Figma
+  </span>
+  
+  <span class="skill-icon">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" />
+    Canva
+  </span>
+
+  <span class="skill-icon">
+    <i class="fa-solid fa-code"></i> C++ (Basics)
+  </span>
+
+  <span class="skill-icon">
+    <i class="fa-brands fa-python"></i> Python (Basics)
+  </span>
+
+  <span class="skill-icon">
+    <i class="fa-brands fa-js"></i> JavaScript
+  </span>
+
+  <span class="skill-icon">
+    <i class="fa-brands fa-html5"></i> HTML
+  </span>
+
+  <span class="skill-icon">
+    <i class="fa-brands fa-css3-alt"></i> CSS
+  </span>
+</div>
+
+  </div>
+</section>
+
+
+
+  <!-- Projects -->
+<section id="projects" class="projects-section">
+  <h2>My Projects</h2>
+  
+  <div class="filter-buttons">
+    <button onclick="filterProjects('all', event)">All</button>
+    <button onclick="filterProjects('web', event)">Web Development</button>
+    <button onclick="filterProjects('iot', event)">IoT</button>
+    <button onclick="filterProjects('ml', event)">Machine Learning</button>
+  </div>
+
+  <div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-card iot" onclick="openModal('project1')">
+      <h3>Anti Bike Theft System</h3>
+      <p><strong>Tech:</strong> IoT</p>
+    </div>
+    
+    <!-- Project 2 -->
+    <div class="project-card ml" onclick="openModal('project2')">
+      <h3>SPARK Internship – AI in Healthcare</h3>
+      <p><strong>Tech:</strong> AI/ML</p>
+    </div>
+    
+    <!-- Project 3 -->
+    <div class="project-card web" onclick="openModal('project3')">
+      <h3>Employee Performance Dashboard</h3>
+      <p><strong>Tech:</strong> HTML, CSS, JS, PHP, MySQL, Tableau</p>
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100"></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modals -->
+<div id="project1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('project1')">&times;</span>
+    <h3>Anti Bike Theft System</h3>
+    <p><strong>Duration:</strong> Feb 2023</p>
+    <p><strong>Tech:</strong> IoT</p>
+    <p><strong>Role:</strong> Hardware Integration & Alert System Design</p>
+    <p><strong>Description:</strong> Developed a prototype Anti-Bike Theft System using IoT sensors and microcontrollers. Integrated motion detection alerts and collaborated on circuit design to improve theft response time.</p>
+  </div>
+</div>
+
+<div id="project2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('project2')">&times;</span>
+    <h3>SPARK Internship – AI in Healthcare</h3>
+    <p><strong>Duration:</strong> Mar 2025 – May 2025</p>
+    <p><strong>Tech:</strong> AI/ML</p>
+    <p><strong>Role:</strong> Model Training & Report Documentation</p>
+    <p><strong>Description:</strong> Worked on disease prediction using AI models. Pre-processed health datasets and supported model training. Documented use cases for AI-based diagnostic tools in real-world hospital applications.</p>
+  </div>
+</div>
+
+<div id="project3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('project3')">&times;</span>
+    <h3>Employee Performance Dashboard</h3>
+    <p><strong>Duration:</strong> Sep 2024 – Dec 2024</p>
+    <p><strong>Tech:</strong> HTML, CSS, JS, PHP, MySQL, Tableau</p>
+    <p><strong>Role:</strong> Frontend Developer</p>
+    <p><strong>Description:</strong> Designed and implemented frontend using HTML, CSS, and JavaScript. Integrated dashboard views with backend data (PHP + MySQL) and embedded Tableau charts for visual HR insights.</p>
+  </div>
+</div>
+
+<section class="certifications-row" id="certifications">
+  <h2 class="section-title">🎓 Certifications</h2>
+  <div class="certifications-container">
+    <div class="cert-card">
+      <h3>Advitiya-23</h3>
+      <p>K L E Institute of Technology</p>
+      <span>11/12/2023</span>
+    </div>
+    <div class="cert-card">
+      <h3>Interface</h3>
+      <p>Christ University</p>
+      <span>17/09/2024</span>
+    </div>
+    <div class="cert-card">
+      <h3>Anveshana'25</h3>
+      <p>BMS Institute of Technology</p>
+      <span>18/03/2025</span>
+    </div>
+    <div class="cert-card">
+      <h3>Hack To Future 3.O</h3>
+      <p>St Joseph Engineering College</p>
+      <span>08/04/2025</span>
+    </div>
+    <div class="cert-card">
+      <h3>Figma for UX</h3>
+      <p>LinkedIn Learning</p>
+      <span>10/03/2025</span>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section id="achievements" class="achievements-section">
+  <h2 class="section-title">🏆 Achievements</h2>
+  <ul class="achievement-list">
+    <li>
+      <i class="fas fa-award"></i>
+      Secured 3rd place at the National Science Day 2023 Tech-Tatva competition.
+    </li>
+    <li>
+      <i class="fas fa-award"></i>
+      Secured 3rd place at the UBDT College of Engineering Utkarsh 2025 Hackathon.
+    </li>
+  </ul>
+</section>
+
+
+<section id="contact" class="contact-section">
+  <h2 class="section-title">📬 Get in Touch</h2>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Contact Info</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Davangere, Karnataka, India</p>
+      <p><i class="fas fa-envelope"></i> hrharsha916gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91 9353241569</p>
+      <div class="social-icons">
+        <a href="https://github.com/Harsha2907" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="www.linkedin.com/in/harsha-hr-99b240357" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:hrharsha916@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+  <div class="wave-bg">
+  <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+    <path d="M0.00,49.98 C150.00,150.00 349.15,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+      style="stroke: none; fill: #007acc;"></path>
+  </svg>
+</div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Made with ❤️ by Harsha HR</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
