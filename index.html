@@ -56,7 +56,7 @@
         <div class="hero-actions">
           <a href="#projects" class="hero-btn">🚀 View My Work</a>
           <!-- ✅ Resume Download (GitHub Pages ready) -->
-          <a href="Harsha H R resume.pdf" class="hero-btn outline" download>Download Resume</a>
+          <a href="Harsha H R Resume.pdf" class="hero-btn outline" download>Download Resume</a>
         </div>
       </div>
       <div class="hero-image" data-aos="zoom-in" data-aos-delay="150">
@@ -82,7 +82,7 @@
           </p>
           <div class="about-cta">
             <!-- ✅ Resume Download (GitHub Pages ready) -->
-            <a href="Harsha H R resume.pdf" class="btn" download>Download Resume</a>
+            <a href="Harsha H R Resume.pdf" class="btn" download>Download Resume</a>
             <a href="#contact" class="btn secondary">Contact Me</a>
           </div>
         </div>
@@ -125,36 +125,53 @@
 </section>
 
 
-  <!-- Projects -->
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">My Projects</h2>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-      <div class="filter-buttons" data-aos="fade-up" data-aos-delay="120">
-        <button class="filter-btn active" onclick="filterProjects('all', event)">All</button>
-        <button class="filter-btn" onclick="filterProjects('web', event)">Web Development</button>
-        <button class="filter-btn" onclick="filterProjects('iot', event)">IoT</button>
-       
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="projects-grid">
+      <div class="project-card" onclick="openModal('project1')">
+        <h3>Anti-Bike Theft System</h3>
+        <p><strong>Tech:</strong> IoT</p>
       </div>
 
-      <div class="projects-grid">
-        <div class="project-card glass iot" data-aos="fade-up" onclick="openModal('project1')">
-          <h3>Anti Bike Theft System</h3>
-          <p><strong>Tech:</strong> IoT</p>
-        </div>
+      <div class="project-card" onclick="openModal('project3')">
+        <h3>Employee Performance Dashboard</h3>
+        <p><strong>Tech:</strong> HTML, CSS, JS, PHP</p>
+      </div>
 
-        <div class="project-card glass web" data-aos="fade-up" data-aos-delay="200" onclick="openModal('project3')">
-          <h3>Employee Performance Dashboard</h3>
-          <p><strong>Tech:</strong> HTML, CSS, JS, PHP, MySQL, Tableau</p>
-        </div>
-
-        <div class="project-card glass web" data-aos="fade-up" data-aos-delay="300" onclick="openModal('project4')">
-          <h3>In Hospital Pharmacy Integration</h3>
-          <p><strong>Tech:</strong> React.js, Express.js, WebSockets</p>
-        </div>
+      <div class="project-card" onclick="openModal('project4')">
+        <h3>In-Hospital Pharmacy Integration</h3>
+        <p><strong>Tech:</strong> Android, PHP, MySQL</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+    <p><strong>Duration:</strong> <span id="modalDuration"></span></p>
+    <p><strong>Technologies:</strong> <span id="modalTech"></span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
 
   <!-- Publications -->
   <section id="publications" class="section">
@@ -259,3 +276,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>
+
