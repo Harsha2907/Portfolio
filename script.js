@@ -71,7 +71,7 @@ const projectData = {
 
   project3: {
     title: "Employee Performance Dashboard",
-    duration: "Sep – Dec 2024",
+    duration: "Sep 2024 – Dec 2024",
     description:
       "Web-based dashboard developed to analyze employee performance using interactive data visualization.",
     tech: "HTML, CSS, JavaScript, PHP, MySQL, Tableau"
@@ -140,5 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.body.style.overflow = "hidden"; // modal open
 document.body.style.overflow = "";       // modal close
+
 
 
