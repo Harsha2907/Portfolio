@@ -79,7 +79,7 @@ const projectData = {
 
   project4: {
     title: "In-Hospital Pharmacy Integration",
-    duration: "Feb 2025 – Jan 2025",
+    duration: "Feb 2025 – Jan 2026",
     description:
       "Android-based pharmacy system developed to automate prescriptions and improve hospital workflow efficiency.",
     tech:
@@ -140,4 +140,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 document.body.style.overflow = "hidden"; // modal open
 document.body.style.overflow = "";       // modal close
+
 
