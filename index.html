@@ -21,6 +21,13 @@
 
   <!-- Scripts -->
   <script src="script.js" defer></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+    (function () {
+        emailjs.init("_gh11lzHhNEr_fxgY");
+    })();
+    </script>
 </head>
 
 <body>
@@ -248,45 +255,47 @@
             <a href="mailto:hrharsha916@gmail.com"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
- <form
-  class="contact-form"
-  action="https://formspree.io/f/xrejrjqz"
-  method="POST"
+<form
+    id="contact-form"
+    onsubmit="sendEmail(event); return false;"
 >
 
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-  />
+    <input
+        type="text"
+        name="from_name"
+        placeholder="Your Name"
+        required
+    >
 
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-  />
+    <input
+        type="email"
+        name="from_email"
+        placeholder="Your Email"
+        required
+    >
 
-  <textarea
-    name="message"
-    rows="5"
-    placeholder="Your Message"
-    required>
-  </textarea>
+    <textarea
+        name="message"
+        placeholder="Your Message"
+        required
+    ></textarea>
 
-  <button type="submit" class="btn">
-    Send Message
-  </button>
+    <button type="submit">
+        Send Message
+    </button>
 
 </form>
+
+<p id="form-message"></p>
     <div class="wave-bg">
       <svg viewBox="0 0 500 150" preserveAspectRatio="none">
         <path d="M0.00,49.98 C150.00,150.00 349.15,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" />
       </svg>
     </div>
   </section>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script src="script.js"></script>
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
