@@ -127,7 +127,7 @@
 
       </div>
     </div>
-  </section>
+  </section>k
   
 
 
@@ -248,14 +248,38 @@
             <a href="mailto:hrharsha916@gmail.com"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
-        <form class="contact-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-    </div>
+ <form
+  class="contact-form"
+  action="https://formspree.io/f/xrejrjqz"
+  method="POST"
+>
+
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+  />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+  />
+
+  <textarea
+    name="message"
+    rows="5"
+    placeholder="Your Message"
+    required>
+  </textarea>
+
+  <button type="submit" class="btn">
+    Send Message
+  </button>
+
+</form>
     <div class="wave-bg">
       <svg viewBox="0 0 500 150" preserveAspectRatio="none">
         <path d="M0.00,49.98 C150.00,150.00 349.15,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" />
